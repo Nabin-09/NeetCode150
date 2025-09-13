@@ -7,3 +7,4 @@
 - `Parent` : The node immediately above current node 
 - `Siblings` : The nodes on same level
 - `Leaf Nodes` : nodes that have no children
+- `Tree` : Non-Linear data structure in which nodes have children.
