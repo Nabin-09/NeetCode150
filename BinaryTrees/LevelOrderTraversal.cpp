@@ -1,17 +1,3 @@
-# Binary Trees
-
-## Some Basic terms :
-- `Node` : An element of tree
-- `Root` : The node from where the tree begins 
-- `Children` : Every node that lies below current node is called Child node.
-- `Parent` : The node immediately above current node 
-- `Siblings` : The nodes on same level
-- `Leaf Nodes` : nodes that have no children
-- `Tree` : Non-Linear data structure in which nodes have children.
-
-### `Creating a tree` : 
-
-```cpp
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -42,18 +28,9 @@ Node* buildtree(Node* root){
     return root;
 
 }
-int main(){
-    Node* root = NULL;
-    root = buildtree(root);
-}
 
-```
+//Level Order Traversal :
 
-### `Traversing the node : Level Order`
-
-Implementation is very easy when we use a queue , insert nodes in it level-wise.
-
-```cpp
 void levelOrderTraversal(Node* root){
     queue<Node*> q;
     q.push(root);
@@ -76,4 +53,14 @@ void levelOrderTraversal(Node* root){
         }
     }
 }
-```
+int main(){
+    Node* root = NULL;
+    root = buildtree(root);
+    //1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
+    cout<<"Level order traversal for the tree : \n";
+    levelOrderTraversal(root);
+    /*
+    Level order traversal for the tree :
+    1 3 5 7 11 17
+    */
+}
